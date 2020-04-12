@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "django-core-api"
+version = "0.1.0-rc1"
+description = ""
+authors = ["João Daher <joao@daher.dev>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+djangorestframework = "^3"
+django-autoslug-iplweb = "^1"
+django-model-utils = "^4"
+django-filter = "^2"
+django-ordered-model = "^3"
+django-redis = "^4"
+django-celery-beat = "^2"
+dj-database-url = "^0"
+python-dateutil = "*"
+whitenoise = "^5"
+envparse = "^0"
+drf-extensions = "^0"
+django-storages = "^1"
+psycopg2-binary = "^2"
+sentry-sdk = "^0"
+celery = "^4"
+Django = "^3"
+newrelic = "*"
+
+
+[tool.poetry.dev-dependencies]
+pylint = "*"
+pylint-django = "*"
+pylint-celery = "*"
+coverage = "*"
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

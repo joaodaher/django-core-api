@@ -1,0 +1,21 @@
+name: Github Release
+
+on: [release]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install Python dependencies
+        run: |
+          make dependencies
+        env:
+          PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+      - name: Build package
+        run: |
+          make publish
